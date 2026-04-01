@@ -9,15 +9,13 @@ function checkNID() {
 	  return false; 
 	}
 }
-
 function checkTicketNo() {
-  let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+	let num = document.getElementById("ticknum").value.trim();
+	
+	if (num === "" || isNaN(num)) return false;
+	let n = parseInt(num);
+	return n >= 1 && n <= 5;
   }
-}
 
 function validateForm() {
 	let fname = document.getElementById("fname").value.trim();
@@ -35,6 +33,12 @@ function validateForm() {
 	  document.getElementById("nid").focus();
 	  return false;
 	}
+
+	if (!checkTicketNo()) {
+		alert("จำนวนตั๋วต้องเป็น 1-5 เท่านั้น!");
+		document.getElementById("ticknum").focus();
+		return false;
+	  }
   
 
 	let total = priceCalculate(); 
