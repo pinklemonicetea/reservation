@@ -17,6 +17,7 @@ function checkTicketNo() {
 	return n >= 1 && n <= 5;
   }
 
+
 function validateForm() {
 	let fname = document.getElementById("fname").value.trim();
 	let lname = document.getElementById("lname").value.trim();
