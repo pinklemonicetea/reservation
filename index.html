@@ -67,5 +67,31 @@
 </form><br><br>
 </div>
 
+<div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-info text-white">
+        <h5 class="modal-title">📢 ข่าวสารประชาสัมพันธ์</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>Promotion พิเศษสำหรับคุณ! ✨</h4>
+        <p>จองตั๋ววันนี้ รับสิทธิ์ลุ้นรับของที่ระลึกหน้างานฟรี!</p>
+        <p class="text-muted">ระบบจองตั๋วออนไลน์ยินดีให้บริการครับ</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">รับทราบ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    var myModal = new bootstrap.Modal(document.getElementById('promoModal'));
+    myModal.show();
+  };
+</script>
+
 </body>
 </html>
